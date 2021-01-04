@@ -40,7 +40,8 @@ const bin2dec = (binary) => {
 }
 
 // -------------------------------● 미션 2 실행부 ●-------------------------------
-const binaryArr = [true, false, true, false, true]; // 10101(2)  10진법으로는 
+const binaryArr = [true, false, true, false, true]; // 10101(2), 21(10)
+console.log(bin2dec(binaryArr));
+console.log(dec2bin(bin2dec(binaryArr)));
 
-console.log(bin2dec([true, true, false, true, true]));
-console.log()
+export { dec2bin, bin2dec }
