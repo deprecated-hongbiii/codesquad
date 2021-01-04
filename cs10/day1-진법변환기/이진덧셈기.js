@@ -37,7 +37,21 @@ console.log(fullAdder(1,0,1));
 // -------------------------------● 미션 2 ●-------------------------------
 
 const byteAdder = (byteA, byteB) => {
-  const length = byteA.length;
+  // 두 배열의 길이 맞춰주기
+  const lengthA = byteA.length;
+  const lengthB = byteB.length;
+  const difference = Math.abs(lengthA - lengthB);
+  let length;
+  if(lengthA > lengthB) {
+    byteB = [...byteB, ...Array(difference).fill(0)]
+    length = lengthA;
+  }
+  if(lengthA < lengthB) {
+    byteA = [...byteA, ...Array(difference).fill(0)]
+    length = lengthB;
+  }
+  
+  // byteAdder 시작
   let carry = false;
   let answer = [];
   for(let i = 0; i < length; i++) {
@@ -54,7 +68,6 @@ const byteAdder = (byteA, byteB) => {
   answer.push(carry);
   return answer;
 }
-// 두 배열 길이가 다를 경우에는 짧은 배열 뒤에 0을 갖다붙이자. concat이나 ... 이용
 
 // -------------------------------● 미션 2 실행부 ●-------------------------------
 // case 1
@@ -62,9 +75,13 @@ const byteAdder = (byteA, byteB) => {
 // const byteB = [1, 0, 1, 1, 0, 0, 1, 1];
 
 // case 2
-const byteA = [1, 1, 0, 0, 1, 0, 1, 0];
-const byteB = [1, 1, 0, 1, 1, 0, 0, 1];
+// const byteA = [1, 1, 0, 0, 1, 0, 1, 0];
+// const byteB = [1, 1, 0, 1, 1, 0, 0, 1];
 
-console.log(byteAdder(byteA, byteB));
+// case 3
+// const byteA = [1, 1, 0, 0, 1, 0, 1, 0]; // 십진수 83
+// const byteB = [1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1]; // 십진수 39835
+
+// console.log(byteAdder(byteA, byteB));
 
 export { xor, and, halfAdder, fullAdder, byteAdder }
