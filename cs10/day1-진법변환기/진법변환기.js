@@ -16,8 +16,6 @@ const dec2bin = (decimal) => {
   }
   return binary.map(e => e == 1 ? true : false);
 }
-// -------------------------------● 미션 1 실행부 ●-------------------------------
-console.log(dec2bin(10));
 
 // -------------------------------● 미션 2 ●-------------------------------
 // [Bool] 2진수 배열을 정수형 10진수로 변환하는 함수 구현하기
@@ -38,10 +36,5 @@ const bin2dec = (binary) => {
   }
   return sum;
 }
-
-// -------------------------------● 미션 2 실행부 ●-------------------------------
-const binaryArr = [true, false, true, false, true]; // 10101(2), 21(10)
-console.log(bin2dec(binaryArr));
-console.log(dec2bin(bin2dec(binaryArr)));
 
 export { dec2bin, bin2dec }
