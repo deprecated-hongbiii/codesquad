@@ -36,7 +36,7 @@ console.log(fullAdder(1,0,1));
 
 // -------------------------------● 미션 2 ●-------------------------------
 
-const byteCalculator = (byteA, byteB) => {
+const byteAdder = (byteA, byteB) => {
   const length = byteA.length;
   let carry = false;
   let answer = [];
@@ -65,4 +65,6 @@ const byteCalculator = (byteA, byteB) => {
 const byteA = [1, 1, 0, 0, 1, 0, 1, 0];
 const byteB = [1, 1, 0, 1, 1, 0, 0, 1];
 
-console.log(byteCalculator(byteA, byteB));
+console.log(byteAdder(byteA, byteB));
+
+export { xor, and, halfAdder, fullAdder, byteAdder }
