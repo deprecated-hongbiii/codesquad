@@ -30,10 +30,6 @@ function fullAdder(bitA, bitB, inputCarry) {
   return [carry, sum];
 }
 
-// -------------------------------● 미션 1 실행부 ●-------------------------------
-// console.log(halfAdder(1, 1));
-console.log(fullAdder(1,0,1));
-
 // -------------------------------● 미션 2 ●-------------------------------
 
 const byteAdder = (byteA, byteB) => {
@@ -68,20 +64,5 @@ const byteAdder = (byteA, byteB) => {
   answer.push(carry);
   return answer;
 }
-
-// -------------------------------● 미션 2 실행부 ●-------------------------------
-// case 1
-// const byteA = [1, 1, 0, 1, 1, 0, 1, 0];
-// const byteB = [1, 0, 1, 1, 0, 0, 1, 1];
-
-// case 2
-// const byteA = [1, 1, 0, 0, 1, 0, 1, 0];
-// const byteB = [1, 1, 0, 1, 1, 0, 0, 1];
-
-// case 3
-// const byteA = [1, 1, 0, 0, 1, 0, 1, 0]; // 십진수 83
-// const byteB = [1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1]; // 십진수 39835
-
-// console.log(byteAdder(byteA, byteB));
 
 export { xor, and, halfAdder, fullAdder, byteAdder }
